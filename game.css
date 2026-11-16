@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #101318;
+    color: white;
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    width: 90%;
+    max-width: 850px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #858d9b;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 30px;
+}
+
+.game-area {
+    border: 1px solid #303844;
+    background: #101f29;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #151b24;
+    border-radius: 4px;
+}
+
+footer {
+    margin-top: 20px;
+    color: #858d9b;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.game-controls {
+    margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.game-controls button {
+    background: #2aa373;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.game-controls button:hover {
+    background: #23865f;
+}
+
+#pause-button {
+    background: #d69b32;
+}
+
+#pause-button:hover {
+    background: #b98225;
+}
+
+#game-message {
+    margin-top: 12px;
+    color: #858d9b;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+#restart-button {
+    background: #ff5263;
+}
+
+#restart-button:hover {
+    background: #d94352;
+}
+
+/* Mobile joystick */
+
+#joystick {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 70px;
+    height: 70px;
+
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+
+    touch-action: none;
+    z-index: 100;
+}
+
+#joystick-stick {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+
+    top: 22px;
+    left: 22px;
+
+    background: rgba(42, 163, 115, 0.85);
+    border: 2px solid white;
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.game-area {
+    position: relative;
+    border: 1px solid #303844;
+    background: #101f29;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    #joystick {
+        display: block;
+    }
+
+    footer {
+        display: none;
+    }
+    #game-message {
+        display: none;
+    }
+}

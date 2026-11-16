@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LAST STAND - Survival Game</title>
+
+    <meta name="description" content="Play LAST STAND,  a 2d survuval game. Fight off endless enemies and see how long you can survive!">
+
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <main class="game-container">
+        <header>
+            <h1>LAST STAND</h1>
+            <p>HOW LONG CAN YOU SURVIVE?</p>
+        </header>
+
+        <section class="game-area">
+            <canvas 
+                id="gameCanvas" 
+                width="800" 
+                height="500"
+                aria-label="LAST STAND survival game arena"
+                role="img">
+            </canvas>
+            <div id="joystick">
+                <div id="joystick-stick"></div>
+            </div>
+        </section>
+
+        <div class="game-controls">
+            <button id="start-button">PLAY GAME</button>
+            <button id="pause-button" hidden>PAUSE</button>
+            <button id="restart-button" hidden>RESTART</button>
+        </div>
+
+        <p id="game-message">
+            SURVIVE AS LONG AS YOU CAN
+        </p>
+
+        <footer>
+            <p>W A S D or ARROW KEYS TO MOVE</p>
+        </footer>
+    </main>
+
+
+
+
+
+
+
+
+
+<script src="game.js"></script>
+</body>
+</html>
